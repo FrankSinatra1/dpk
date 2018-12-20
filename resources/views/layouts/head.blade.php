@@ -28,6 +28,8 @@
                             <li><a href="">Даблшев</a></li>
                         </ul>
                     </li>
+                    <li>
+                    </li>
                     <li><a href="">Студенту</a></li>
                     <li><a href="">Контакты</a></li>
                     <li><a href="" class="popup">Обратная связь</a></li>
@@ -116,9 +118,9 @@
                   </g>
                 </svg>
             </div>
-            <input type="text" placeholder="ФИО" class="formitem">
-            <input type="email" placeholder="Email" class="formitem">
-            <textarea name="" id="" placeholder="Текст жалобы" class="formitem"></textarea>
+            <input type="text" placeholder="ФИО" class="formitem" required>
+            <input type="email" placeholder="Email" class="formitem" required>
+            <textarea name="" id="" placeholder="Текст жалобы" class="formitem" required></textarea>
             <input type="submit" value="Пожаловаться" class="formsubmit">
         </form>
     </div>

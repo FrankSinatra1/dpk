@@ -86,7 +86,7 @@ section {
 	box-shadow: 0px 0px 18px #382A74;
 }
 
-.tabs__content p {
+.tabs__content h1 {
 	margin-bottom: 20px;
 	font-weight: 600;
 	font-size: 18px;
@@ -180,6 +180,8 @@ section {
 .file-add {
 	height: 51px;
 	margin-bottom: 40px;
+	-ms-align-items: center;
+	align-items: center;
 }
 
 .file-add label {
@@ -192,4 +194,18 @@ label.added {
     border-color: #fff;
     text-decoration: underline;
     font-weight: 500;
+}
+
+.wrap-file-add {
+	flex-wrap: wrap;
+}
+
+.file-added {
+	height: 51px;
+	margin-bottom: 10px;
+	-ms-align-items: center;
+	align-items: center;
+	margin-right: 30px;
+	text-decoration: underline;
+	font-weight: 500;
 }

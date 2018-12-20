@@ -86,6 +86,10 @@ body {
 	z-index: 1;
 }
 
+.wrap-container.active, .header.active, .footer.active {
+	filter: blur(4px);
+}
+
 a {
 	display: block;
 }
@@ -638,4 +642,34 @@ a {
 
 .board-student {
 	margin: 20px;
+}
+
+/*404*/
+
+.wrapper-error-page {
+	height: 100vh;
+	width: 100%;
+	justify-content: center;
+}
+
+.wrapper-error-page .flex {
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	position: absolute;
+	top: 48%;
+	transform: translateY(-50%);
+	
+}
+
+.wrapper-error-page h1 {
+	color: #382A74;
+	font-size: 220px;
+}
+
+.wrapper-error-page a {
+	text-decoration: underline;
+	display: inline;
+	font-weight: 500;
+	margin-left: 20px;
 }

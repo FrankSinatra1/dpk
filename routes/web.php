@@ -27,6 +27,20 @@ Route::get('/board', function () {
     return view('board');
 });
 
+Route::get('/addgallery', function () {
+    return view('addgallery');
+});
+
 Route::get('/admin', function () {
     return view('admin/admin');
 });
+
+Route::get('/nopage', function () {
+    return view('nopage');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/admin', ['uses' => 'ContactController@show'])->name('admin')->middleware('auth');

@@ -12,6 +12,36 @@
     <body class="body">
         <header class="header flex">
             <p>Панель администрирования</p>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="panel panel-default">
+                            <!-- <div class="panel-heading">Панель администрирования</div> -->
+
+                            <div class="panel-body">
+                                @if (session('status'))
+                                    <div class="alert alert-success">
+                                        {{ session('status') }}
+                                    </div>
+                                @endif
+
+                                Админ: <strong>{{ Auth::user()->name}}</strong>
+
+                                <a href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                    Выйти
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
     
         <div class="wrap-container">
@@ -27,6 +57,7 @@
                         <li class="active"><a href="/galery">Фотогалерея</a></li>
                         <li><a href="/board">Доска почёта</a></li>
                         <li><a href="">Сведения об образовательной организации</a></li>
+                        <li><a href="">{{ News::new()->title}}</a></li>
                     </ul>
                 </div>
                 <section class="tabs__content">

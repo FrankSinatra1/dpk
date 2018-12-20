@@ -43,9 +43,7 @@ $(function () {
 	popup.on("click", function (e) {
 		e.preventDefault();
 
-		$(".wrap-container, .header, .footer").css({
-			filter: "blur(4px)",
-		})
+		$(".wrap-container, .header, .footer").addClass("active");
 		$(".wrapper-popup").css({
 			opacity: "1",
 			zIndex: 1000
@@ -57,9 +55,7 @@ $(function () {
 			opacity: "0",
 			zIndex: -1000
 		})
-		$(".wrap-container, .header, .footer").css({
-			filter: "blur(0)",
-		})
+		$(".wrap-container, .header, .footer").removeClass("active");
 	});
 
 });

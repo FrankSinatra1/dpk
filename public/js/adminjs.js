@@ -18,24 +18,25 @@
 
 $(function () {
 
-	var cloneElem = $(".file-add").clone();
 	
-	function addFile (leafname, thiss) {
+	function addFile (leafname) {		
+		$(".wrap-file-add").prepend("<div class='file-added flex'><p>"+leafname+"</p></div>");
+		
+		if (leafname == "") {
+			$(".wrap-file-add .file-added")[0].remove();
+			$(".wrap-file-add .file-added")[0].remove();
+			console.log($(".wrap-file-add .file-added")[0]);
+		};
 
-		$(".wrap-file-add").append(cloneElem);
-		console.log(cloneElem);
-		$(".labelFile").addClass("added");
-		$(".labelFile").text(leafname);
+		console.log(leafname);
 	}
 
-	console.log(cloneElem);
 	$(".tinput").on("change", function (e) {
 		
-		var label = $(this).parent();
 		var pathname = $(this).val();
-		var leafname = pathname.split('\\').pop().split('/').pop();
+		var leafname = pathname.split('\\').pop().split('/').pop();		
 
-		addFile(leafname, label);
+		addFile(leafname);
 	})
 	
 })
