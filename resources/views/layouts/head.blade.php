@@ -32,6 +32,16 @@
                     </li>
                     <li><a href="">Студенту</a></li>
                     <li><a href="">Контакты</a></li>
+                    <li><script type="text/javascript" src="https://vk.com/js/api/openapi.js?160"></script>
+<script type="text/javascript">
+  VK.init({apiId: 6780653});
+</script>
+
+<!-- VK Widget -->
+<div id="vk_auth"></div>
+<script type="text/javascript">
+  VK.Widgets.Auth("vk_auth", {"onAuth":"function(data) {alert('user '+data['uid']+' authorized');}"});
+</script></li>
                     <li><a href="" class="popup">Обратная связь</a></li>
                     <li class="search flex">
                         <svg xmlns="http://www.w3.org/2000/svg" class="svgsearch" viewBox="0 0 20.751 20.751">
