@@ -57,7 +57,17 @@
                         <li class="active"><a href="/galery">Фотогалерея</a></li>
                         <li><a href="/board">Доска почёта</a></li>
                         <li><a href="">Сведения об образовательной организации</a></li>
-                        <li><a href="">{{ News::new()->title}}</a></li>
+                        <li><a href=""><script type="text/javascript" src="https://vk.com/js/api/openapi.js?160"></script>
+                            <script type="text/javascript">
+                              VK.init({apiId: 6780653});
+                            </script>
+
+                            <!-- VK Widget -->
+                            <div id="vk_auth"></div>
+                            <script type="text/javascript">
+                              VK.Widgets.Auth("vk_auth", {"onAuth":"function(data) {alert('user '+data['uid']+' authorized');}"});
+                            </script>
+                        </a></li>
                     </ul>
                 </div>
                 <section class="tabs__content">
