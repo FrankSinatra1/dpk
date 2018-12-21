@@ -38,7 +38,7 @@ define("URL", "http://192.162.213.124/public/");
                     </li>
                     <li><a href="">Студенту</a></li>
                     <li><a href="">Контакты</a></li>
-                    <li><a href="https://oauth.vk.com/authorize?client_id={{ID}}&display=page&redirect_uri={{URL}}&response_type=code" target="_blank">Войти через ВК</a></li>
+                    <li><a href="https://oauth.vk.com/authorize?client_id={{ $ID }}&display=page&redirect_uri={{ $URL }}&response_type=code" target="_blank">Войти через ВК</a></li>
                     <li><a href="" class="popup">Обратная связь</a></li>
                     <li class="search flex">
                         <svg xmlns="http://www.w3.org/2000/svg" class="svgsearch" viewBox="0 0 20.751 20.751">
