@@ -1,10 +1,10 @@
-{{!!
+<?
 
 define("ID", "6780653");
 define("SECRET", "bLkNsM19wIdQQBM0qHBw");
 define("URL", "http://192.162.213.124/public/");
 
-!!}}
+?>
 
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
@@ -12,7 +12,7 @@ define("URL", "http://192.162.213.124/public/");
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Колледж</title>
+        <title>Колледж</title>ч 
         <!-- Fonts -->
         <link rel="stylesheet" href="{{ URL::asset('css/owl.carousel.min.css') }}" />
         <link rel="stylesheet" href="{{ URL::asset('css/owl.theme.default.css') }}" />
