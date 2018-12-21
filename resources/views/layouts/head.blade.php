@@ -1,8 +1,8 @@
 {{
 
-define('ID', '6780653');
-define('SECRET', 'bLkNsM19wIdQQBM0qHBw');
-define('URL', 'http://192.162.213.124/public/');
+define("ID", "6780653")
+define("SECRET", "bLkNsM19wIdQQBM0qHBw")
+define("URL", "http://192.162.213.124/public/")
 
 }}
 
