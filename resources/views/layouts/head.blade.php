@@ -4,18 +4,20 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Колледж</title>
+        <title>Отделение "Программирования"</title>
+        <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" type="image/x-icon">
         <!-- Fonts -->
-        <link rel="stylesheet" href="{{ URL::asset('css/owl.carousel.min.css') }}" />
-        <link rel="stylesheet" href="{{ URL::asset('css/owl.theme.default.css') }}" />
-        <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/owl.theme.default.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
     </head>
     <body class="body">
 
        <header class="header flex">
             <div class="logo">
                 <a href="/" class="flex">
-                    <img src="{{ URL::asset('img/logo.svg') }}" alt="">
+                    <img src="{{ asset('img/logo.svg') }}" alt="">
                     <span>Отделение "Программирования"</span>
                 </a>
             </div>
@@ -30,16 +32,6 @@
                     </li>
                     <li><a href="">Студенту</a></li>
                     <li><a href="">Контакты</a></li>
-                    <li><script type="text/javascript" src="https://vk.com/js/api/openapi.js?160"></script>
-<script type="text/javascript">
-  VK.init({apiId: 6780653});
-</script>
-
-<!-- VK Widget -->
-<div id="vk_auth"></div>
-<script type="text/javascript">
-  VK.Widgets.Auth("vk_auth", {"onAuth":"function(data) {alert('user '+data['uid']+' authorized');}"});
-</script></li>
                     <li><a href="" class="popup">Обратная связь</a></li>
                     <li class="search flex">
                         <svg xmlns="http://www.w3.org/2000/svg" class="svgsearch" viewBox="0 0 20.751 20.751">
@@ -89,7 +81,7 @@
 
             <footer class="footer flex">
                 <div class="footer-text flex">
-                    <a href=""><img src="{{ URL::asset('img/logo.svg') }}" alt="" class="footer-logo"></a>
+                    <a href=""><img src="{{ asset('img/logo.svg') }}" alt="" class="footer-logo"></a>
                     <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Алфавит жизни все, lorem мир несколько которое инициал продолжил предупреждал оксмокс семантика над гор составитель заманивший языком бросил большого языкового.</p>
                 </div>
                 <div class="footer-map">
@@ -98,10 +90,10 @@
                 <div class="footer-contact flex">
                     <p>Связаться с нами:</p>
                     <ul>
-                        <li><a href="tel:+7(988)-635-60-93" class="footer-phone flex"><img src="{{ URL::asset('img/phone.svg') }}" alt="">+7(988)-635-60-93</a></li>
-                        <li><a href="tel:+7(988)-635-60-93" class="footer-phone flex"><img src="{{ URL::asset('img/phone.svg') }}" alt="">+7(988)-635-60-93</a></li>
-                        <li><a href="" class="footer-email flex"><img src="{{ URL::asset('img/email.svg') }}" alt="">rpk_colledge@gmail.com</a></li>
-                        <li><a href="" class="footer-inst flex"><img src="{{ URL::asset('img/inst.svg') }}" alt="">rpk_colledge</a></li>
+                        <li><a href="tel:+7(988)-635-60-93" class="footer-phone flex"><img src="{{ asset('img/phone.svg') }}" alt="">+7(988)-635-60-93</a></li>
+                        <li><a href="tel:+7(988)-635-60-93" class="footer-phone flex"><img src="{{ asset('img/phone.svg') }}" alt="">+7(988)-635-60-93</a></li>
+                        <li><a href="" class="footer-email flex"><img src="{{ asset('img/email.svg') }}" alt="">rpk_colledge@gmail.com</a></li>
+                        <li><a href="" class="footer-inst flex"><img src="{{ asset('img/inst.svg') }}" alt="">rpk_colledge</a></li>
                     </ul>
                 </div>
             </footer>
@@ -132,8 +124,8 @@
             <input type="submit" value="Пожаловаться" class="formsubmit">
         </form>
     </div>
-        <script src="{{ URL::asset('js/jq.min.js') }}"></script>
-        <script src="{{ URL::asset('js/owl.carousel.min.js') }}"></script>
-        <script src="{{ URL::asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/jq.min.js') }}"></script>
+        <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>

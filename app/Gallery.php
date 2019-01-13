@@ -4,16 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class News extends Model
+class Gallery extends Model
 {
-    public $table = 'news';
+    public $table = 'gallery';
 
     public $fillable = [
     	'id',
     	'photo',
     	'title',
-    	'text',
     ];
     public $timestamps = false;
 }
-

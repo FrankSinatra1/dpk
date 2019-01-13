@@ -473,9 +473,10 @@ a {
 	border-radius: 10px;
     width: 100%;
     max-width: 35%;
-    object-fit: cover;
+    /*object-fit: cover;*/
     object-position: center;
     margin-right: 20px;
+    height: 200px;
 }
 
 .news_item-text a {
@@ -489,6 +490,11 @@ a {
 	opacity: .9;
 }
 
+.news_item-text p {
+	word-break: break-all;
+	width: 100%;
+}
+
 .news_item-text a:hover {
 	opacity: 1;
 }
@@ -496,6 +502,8 @@ a {
 .news_item-text {
 	flex-direction: column;
 	align-items: flex-end;
+	width: 100%;
+	justify-content: space-around;
 }
 
 /*footer*/
@@ -579,7 +587,15 @@ a {
 	position: relative;
 }
 
-.wrapper-pagination a {
+.pagination {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.wrapper-pagination li {
 	border: 1px solid #141414;
 	height: 30px;
 	width: 30px;
@@ -588,11 +604,39 @@ a {
 	line-height: 30px;
 	border-radius: 50%;
 	margin-left: 5px;
+	cursor: pointer;
 }
 
-.wrapper-pagination a:hover {
+.wrapper-pagination li.active {
 	background: #141414;
+}
+
+.wrapper-pagination li.active span {
+	color: #fff !important;
+}
+
+.pagination .disabled {
+	cursor: default;
+}
+
+.wrapper-pagination li:last-child, .wrapper-pagination li:first-child {
+	border: 1px solid #fff;
+}
+
+.wrapper-pagination li:hover {
+	background: #141414;
+}
+
+.wrapper-pagination li:hover * {
 	color: #fff;
+}
+
+.wrapper-pagination li:last-child:hover, .wrapper-pagination li:first-child:hover {
+	background: #fff;
+}
+
+.wrapper-pagination li:last-child:hover *, .wrapper-pagination li:first-child:hover * {
+	color: #000;
 }
 
 @keyframes arrowAnim {
@@ -626,7 +670,8 @@ a {
 }
 
 .board-student img {
-	width: 250px;    
+	width: 250px;
+	height: 350px;
 	border: 1px solid #707070;
     overflow: hidden;
     border-radius: 20px;
@@ -672,4 +717,35 @@ a {
 	display: inline;
 	font-weight: 500;
 	margin-left: 20px;
+}
+
+/*Новость*/
+
+.ournew-wrapper {
+	padding: 20px;
+}
+
+.ournew-wrapper p {
+	margin: 25px 0 25px;
+}
+
+.ournew-wrapper img {
+	width: 100%;
+	border-radius: 10px;
+}
+
+/*Галерея*/
+
+.gallery-wrapper {
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.gallery-wrapper h1 {
+	margin-bottom: 25px;
+}
+
+.gallery-wrapper img {
+	width: 100%;	
+	border-radius: 10px;
 }

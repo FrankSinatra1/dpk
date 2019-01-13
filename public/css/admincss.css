@@ -125,7 +125,7 @@ section {
 }
 
 .section-one {
-	align-items: center;
+	align-items: flex-start;
 }
 
 .section-one__menu ul li a:hover {
@@ -172,7 +172,7 @@ section {
 	color: #fff;
 }
 
-#photogalery-form {
+.photogalery-form {
 	flex-direction: column;
 	align-items: flex-start;	
 }

@@ -49,19 +49,32 @@
                 <div class="section-one__menu">
                     <p class="titleSection">Меню</p>
                     <ul class="tabs__caption">
-                        <li><a href="/news">Новости отделения</a></li>
+                        <li class="active"><a href="/news">Новости отделения</a></li>
                         <li><a href="">Учебно-методическая работа</a></li>
                         <li><a href="">Воспитательная работа</a></li>
                         <li><a href="">Преподавательский состав</a></li>
                         <li><a href="">Расписание занятий</a></li>
-                        <li class="active"><a href="/galery">Фотогалерея</a></li>
+                        <li class=""><a href="/galery">Фотогалерея</a></li>
                         <li><a href="/board">Доска почёта</a></li>
                         <li><a href="">Сведения об образовательной организации</a></li>
-                        <li><a href="">{{ News::new()->title}}</a></li>
                     </ul>
                 </div>
-                <section class="tabs__content">
-                    <h1>ЭЛЕМЕНТ 1ЙУЦАУЙЦПЙУПЙ</h1>
+                <section class="tabs__content active">
+                    <form action="{{ route('news.create') }}" method="post" enctype="multipart/form-data">
+                        <h1>Заголовок</h1>
+                        <input type="text" class="formitem" name="title">
+                        <h1>Фотография</h1>
+                        <div class="wrap-file-add flex">
+                            <div class="file-add flex">
+                                <label for="tinputnews" class="labelFile">Добавить фото</label>
+                                <input name="photo" type="file" class="tinput" id="tinputnews" hidden="" multiple="multiple" accept=".txt,image/*">
+                            </div>
+                        </div>
+                        <h1>Основной текст</h1>
+                        <input type="text" class="formitem" name="text"><br>
+                        <input type="submit" value="Добавить" class="formsubmit">
+                        {{ csrf_field() }}
+                    </form>
                 </section>
                 <section class="tabs__content">
                     <h1>ЭЛЕМЕНТ 2ЦЙПЙЦПЙЦ</h1>
@@ -75,7 +88,7 @@
                 <section class="tabs__content">
                     <h1>ЭЛЕМЕНТ 2ЦЙПЙЦПЙЦ</h1>
                 </section>
-                <section class="tabs__content active">
+                <section class="tabs__content">
                     <form action="" method="post" id="photogalery-form" class="flex">
                         <h1>Заголовок</h1>
                         <input type="text" class="formitem">

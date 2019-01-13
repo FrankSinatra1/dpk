@@ -11,21 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/galery', function () {
-    return view('galery');
-});
+Route::get('/', 'SiteController@index');
 
-Route::get('/news', function () {
-    return view('news');
-});
+Route::get('/galery', 'GalleryController@index');
 
-Route::get('/board', function () {
-    return view('board');
-});
+Route::get('/news', 'NewsController@index');
+
+Route::get('/board', 'BoardController@index');
 
 Route::get('/addgallery', function () {
     return view('addgallery');
@@ -42,5 +35,21 @@ Route::get('/nopage', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+// 						КОНТРОЛЛЕРЫ@функция в контроллере
 
-Route::get('/admin', ['uses' => 'ContactController@show'])->name('admin')->middleware('auth');
+Route::post('/addgallery', [
+	'uses' => 'GalleryController@insert'
+])->name('gallery.create');
+
+
+Route::post('/addnews', [
+	'uses' => 'NewsController@insert'
+])->name('news.create');
+
+Route::post('/addboard', [
+	'uses' => 'BoardController@insert'
+])->name('board.create');
+
+Route::post('/image/upload', 'ImageController@upload')->name('image.upload');
+
+Route::get('/ournew/{new}', 'NewsController@new');
