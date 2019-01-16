@@ -12,13 +12,11 @@
     <body class="body">
         <header class="header flex">
             <p>Панель администрирования</p>
-
+            <a href="/" style="font-weight: 500;">На главную</a>
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="panel panel-default">
-                            <!-- <div class="panel-heading">Панель администрирования</div> -->
-
                             <div class="panel-body">
                                 @if (session('status'))
                                     <div class="alert alert-success">
@@ -50,13 +48,10 @@
                     <p class="titleSection">Меню</p>
                     <ul class="tabs__caption">
                         <li class="active"><a href="/news">Новости отделения</a></li>
-                        <li><a href="">Учебно-методическая работа</a></li>
-                        <li><a href="">Воспитательная работа</a></li>
-                        <li><a href="">Преподавательский состав</a></li>
+                        <li><a href="/teacher">Преподавательский состав</a></li>
                         <li><a href="">Расписание занятий</a></li>
-                        <li class=""><a href="/galery">Фотогалерея</a></li>
+                        <li><a href="/galery">Фотогалерея</a></li>
                         <li><a href="/board">Доска почёта</a></li>
-                        <li><a href="">Сведения об образовательной организации</a></li>
                     </ul>
                 </div>
                 <section class="tabs__content active">
@@ -77,29 +72,51 @@
                     </form>
                 </section>
                 <section class="tabs__content">
-                    <h1>ЭЛЕМЕНТ 2ЦЙПЙЦПЙЦ</h1>
+                    <form action="{{ route('teacher.create') }}" method="post"  class="flex photogalery-form" enctype="multipart/form-data">
+                        <h1>Фамилия И.О</h1>
+                        <input type="text" class="formitem" name="name">
+                        <h1>Фотография</h1>
+                        <div class="wrap-file-add flex">
+                            <div class="file-add flex">
+                                <label for="tinputboard" class="labelFile">Добавить фото</label>
+                                <input name="photo" type="file" class="tinput" id="tinputboard" hidden="" multiple="multiple" accept=".txt,image/*">
+                            </div>
+                        </div>
+                        <input type="submit" value="Добавить" class="formsubmit">
+                        {{ csrf_field() }}
+                    </form>
                 </section>
                 <section class="tabs__content">
-                    <h1>ЭЛЕМЕНТ 3ЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙ</h1>
+                    <h1>Расписание</h1>
                 </section>
                 <section class="tabs__content">
-                    <h1>ЭЛЕМЕНТ 1ЙУЦАУЙЦПЙУПЙ</h1>
-                </section>
-                <section class="tabs__content">
-                    <h1>ЭЛЕМЕНТ 2ЦЙПЙЦПЙЦ</h1>
-                </section>
-                <section class="tabs__content">
-                    <form action="" method="post" id="photogalery-form" class="flex">
+                    <form action="{{ route('gallery.create') }}" method="post" class="flex photogalery-form" enctype="multipart/form-data">
                         <h1>Заголовок</h1>
-                        <input type="text" class="formitem">
+                        <input type="text" class="formitem" name="title">
                         <h1>Фотографии</h1>
                         <div class="wrap-file-add flex">
                             <div class="file-add flex">
                                 <label for="tinput" class="labelFile">Добавить фото</label>
-                                <input name="imgfile" type="file" class="tinput" id="tinput" hidden="" multiple="multiple" accept=".txt,image/*">
+                                <input name="photo" type="file" class="tinput" id="tinputgallery" hidden="" multiple="multiple" accept=".txt,image/*">
                             </div>
                         </div>
                         <input type="submit" value="Добавить" class="formsubmit">
+                        {{ csrf_field() }}
+                    </form>
+                </section>
+                <section class="tabs__content">
+                    <form action="{{ route('board.create') }}" method="post"  class="flex photogalery-form" enctype="multipart/form-data">
+                        <h1>Группа, Фамилия ИО</h1>
+                        <input type="text" class="formitem" name="name">
+                        <h1>Фотография</h1>
+                        <div class="wrap-file-add flex">
+                            <div class="file-add flex">
+                                <label for="tinputboard" class="labelFile">Добавить фото</label>
+                                <input name="photo" type="file" class="tinput" id="tinputboard" hidden="" multiple="multiple" accept=".txt,image/*">
+                            </div>
+                        </div>
+                        <input type="submit" value="Добавить" class="formsubmit">
+                        {{ csrf_field() }}
                     </form>
                 </section>
             </div>

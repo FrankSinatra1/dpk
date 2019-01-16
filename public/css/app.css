@@ -738,7 +738,11 @@ a {
 
 .gallery-wrapper {
 	padding: 20px;
-	margin-bottom: 20px;
+	box-shadow: 0 0 1px rgba(0,0,0,.18);
+}
+
+.gallery-wrapper:last-child {
+	border-bottom: none;
 }
 
 .gallery-wrapper h1 {
@@ -748,4 +752,49 @@ a {
 .gallery-wrapper img {
 	width: 100%;	
 	border-radius: 10px;
+}
+
+
+/**/
+
+.navbar-default {
+	margin-bottom: 100px;
+}
+
+.navbar-default .container {
+	width: 100%;
+	padding: 15px 60px;
+	justify-content: space-between;
+	box-shadow: 0 0 15px rgba(0,0,0,.15);
+}
+
+.nav.navbar-nav.navbar-right li:first-child{
+	margin-bottom: 10px;
+}
+
+.panel-body {
+	justify-content: center;
+}
+
+.form-horizontal .form-group .checkbox {
+	margin-bottom: 10px;
+}
+
+.form-horizontal .form-group .formsubmit {
+	margin-bottom: 10px;
+}
+
+.form-horizontal .form-group label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+/*about*/
+
+.about-colledge {
+	padding: 20px;
+}
+
+.about-colledge h1 {
+	margin-bottom: 20px;
 }

@@ -20,12 +20,14 @@ Route::get('/news', 'NewsController@index');
 
 Route::get('/board', 'BoardController@index');
 
+Route::get('/teacher', 'TeacherController@index');
+
 Route::get('/addgallery', function () {
     return view('addgallery');
 });
 
-Route::get('/admin', function () {
-    return view('admin/admin');
+Route::get('/about', function () {
+    return view('about');
 });
 
 Route::get('/nopage', function () {
@@ -34,12 +36,16 @@ Route::get('/nopage', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'HomeController@index')->name('admin');
 // 						КОНТРОЛЛЕРЫ@функция в контроллере
 
 Route::post('/addgallery', [
 	'uses' => 'GalleryController@insert'
 ])->name('gallery.create');
+
+Route::post('/addteacher', [
+	'uses' => 'TeacherController@insert'
+])->name('teacher.create');
 
 
 Route::post('/addnews', [

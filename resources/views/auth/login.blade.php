@@ -5,9 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Вход</div>
-
-                <div class="panel-body">
+                <div class="panel-body flex">
                     <form class="form-horizontal popup-form" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
@@ -55,9 +53,9 @@
                                     Войти
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+<!--                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     Забыли пароль?
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                     </form>
