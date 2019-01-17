@@ -29,18 +29,52 @@
 
     <section class="wrapper-news">
         <p class="titleSection">Новости</p>
-        @foreach($news as $item)
-            <div class="wrapper-news_item">
-                <div class="flex">
-                    <img src="{{ asset('/storage/' . $item->photo) }}" alt="">
-                    <div class="news_item-text flex">
-                        <p><b>{{ mb_strimwidth($item->title, 0, 100, '') }}</b></p>
-                        <p>{{ mb_strimwidth($item->text, 0, 100, '') }}</p>
-                        <a href="/ournew/{{ $item->id }}">Читать дольше</a>
-                    </div>
+        <div class="wrapper-news_item">
+            <div class="flex">
+                <img src="{{ URL::asset('img/news.jpg') }}" alt="">
+                <div class="news_item-text flex">
+                    <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Однажды залетают дорогу послушавшись вопрос моей напоивший заголовок страна запятых, рот пояс журчит, толку ему предложения своего ведущими приставка, раз!</p>
+                    <a href="">Читать дольше</a>
                 </div>
             </div>
-        @endforeach
+        </div>
+        <div class="wrapper-news_item">
+            <div class="flex">
+                <img src="{{ URL::asset('img/news.jpg') }}" alt="">
+                <div class="news_item-text flex">
+                    <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Однажды залетают дорогу послушавшись вопрос моей напоивший заголовок страна запятых, рот пояс журчит, толку ему предложения своего ведущими приставка, раз!</p>
+                    <a href="">Читать дольше</a>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-news_item">
+            <div class="flex">
+                <img src="{{ URL::asset('img/news.jpg') }}" alt="">
+                <div class="news_item-text flex">
+                    <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Однажды залетают дорогу послушавшись вопрос моей напоивший заголовок страна запятых, рот пояс журчит, толку ему предложения своего ведущими приставка, раз!</p>
+                    <a href="">Читать дольше</a>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-news_item">
+            <div class="flex">
+                <img src="{{ URL::asset('img/news.jpg') }}" alt="">
+                <div class="news_item-text flex">
+                    <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Однажды залетают дорогу послушавшись вопрос моей напоивший заголовок страна запятых, рот пояс журчит, толку ему предложения своего ведущими приставка, раз!</p>
+                    <a href="">Читать дольше</a>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-news_item">
+            <div class="flex">
+                <img src="{{ URL::asset('img/news.jpg') }}" alt="">
+                <div class="news_item-text flex">
+                    <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Однажды залетают дорогу послушавшись вопрос моей напоивший заголовок страна запятых, рот пояс журчит, толку ему предложения своего ведущими приставка, раз!</p>
+                    <a href="">Читать дольше</a>
+                </div>
+            </div>
+        </div>
+
         <div class="wrapper-pagination flex">
             <div>
                 <p class="flex">Можете перейти на следующую страницу новостей <span>
@@ -50,7 +84,10 @@
                 </span></p>
             </div>
             <div class="flex">
-                {{ $news->links() }}
+                <a href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
             </div>
         </div>
     </section>

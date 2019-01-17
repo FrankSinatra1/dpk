@@ -10,7 +10,8 @@ class SearchController extends Controller
 	public function query(Request $request)
     {
     	$search_value = $request->get('search');
-        $search = Search::search("{{$search_value}}")->paginate(1);
+        $search = Search::where('title', 'LIKE', '%'. $search_value . '%')->get();
+        
         return view('search', compact('search'));
     }
 }

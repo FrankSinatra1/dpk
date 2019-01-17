@@ -4,26 +4,24 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Отделение "Программирования"</title>
-        <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" type="image/x-icon">
+        <title>Колледж</title>
         <!-- Fonts -->
-        <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}" />
-        <link rel="stylesheet" href="{{ asset('css/owl.theme.default.css') }}" />
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="{{ URL::asset('css/owl.carousel.min.css') }}" />
+        <link rel="stylesheet" href="{{ URL::asset('css/owl.theme.default.css') }}" />
+        <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}" />
     </head>
     <body class="body">
 
        <header class="header flex">
             <div class="logo">
-                <a href="{{ asset('/') }}" class="flex">
-                    <img src="{{ asset('img/logo.svg') }}" alt="">
+                <a href="/" class="flex">
+                    <img src="{{ URL::asset('img/logo.svg') }}" alt="">
                     <span>Отделение "Программирования"</span>
                 </a>
             </div>
             <div class="listMenu">
                 <ul class="flex">
-                    <li><a href="{{ asset('/') }}">Главная</a></li>
+                    <li><a href="/">Главная</a></li>
                     <li><a href="">Об отделении</a>
                         <ul>
                             <li><a href="">Что-то такое</a></li>
@@ -40,7 +38,7 @@
                     </li>
                 </ul>
             </div>
-            <form action="{{ route ('search.create') }}" method="get" class="form-search flex">
+            <form action="{{ route('search.create') }}" method="get" class="form-search flex">
                 <input type="text" placeholder="Поиск" class="input-search" name="search" autocomplete="off">
                 <div class="container-close-search flex">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.962 45.962" class="close-search">
@@ -57,14 +55,6 @@
                     </svg>
                 </div>
             </form>
-
-            <div class="result">
-                <p></p>
-            </div>
-
-            <script>
-                
-            </script>
         </header>
 
         <div class="wrap-container">
@@ -72,11 +62,11 @@
                 <div class="section-one__menu">
                     <p class="titleSection">Меню</p>
                     <ul>
-                        <li><a href="{{ asset('/news') }}">Новости отделения</a></li>
-                        <li><a href="{{ asset('/teacher') }}">Преподавательский состав</a></li>
-                        <li><a href="{{ asset('/schedule') }}">Расписание занятий</a></li>
-                        <li><a href="{{ asset('/galery') }}">Фотогалерея</a></li>
-                        <li><a href="{{ asset('/board') }}">Доска почёта</a></li>
+                        <li><a href="/news">Новости отделения</a></li>
+                        <li><a href="/teacher">Преподавательский состав</a></li>
+                        <li><a href="">Расписание занятий</a></li>
+                        <li><a href="/galery">Фотогалерея</a></li>
+                        <li><a href="/board">Доска почёта</a></li>
                     </ul>
                 </div>
 
@@ -86,7 +76,7 @@
 
             <footer class="footer flex">
                 <div class="footer-text flex">
-                    <a href=""><img src="{{ asset('img/logo.svg') }}" alt="" class="footer-logo"></a>
+                    <a href=""><img src="{{ URL::asset('img/logo.svg') }}" alt="" class="footer-logo"></a>
                     <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Алфавит жизни все, lorem мир несколько которое инициал продолжил предупреждал оксмокс семантика над гор составитель заманивший языком бросил большого языкового.</p>
                 </div>
                 <div class="footer-map">
@@ -95,10 +85,10 @@
                 <div class="footer-contact flex">
                     <p>Связаться с нами:</p>
                     <ul>
-                        <li><a href="tel:+7(988)-635-60-93" class="footer-phone flex"><img src="{{ asset('img/phone.svg') }}" alt="">+7(988)-635-60-93</a></li>
-                        <li><a href="tel:+7(988)-635-60-93" class="footer-phone flex"><img src="{{ asset('img/phone.svg') }}" alt="">+7(988)-635-60-93</a></li>
-                        <li><a href="" class="footer-email flex"><img src="{{ asset('img/email.svg') }}" alt="">rpk_colledge@gmail.com</a></li>
-                        <li><a href="" class="footer-inst flex"><img src="{{ asset('img/inst.svg') }}" alt="">rpk_colledge</a></li>
+                        <li><a href="tel:+7(988)-635-60-93" class="footer-phone flex"><img src="{{ URL::asset('img/phone.svg') }}" alt="">+7(988)-635-60-93</a></li>
+                        <li><a href="tel:+7(988)-635-60-93" class="footer-phone flex"><img src="{{ URL::asset('img/phone.svg') }}" alt="">+7(988)-635-60-93</a></li>
+                        <li><a href="" class="footer-email flex"><img src="{{ URL::asset('img/email.svg') }}" alt="">rpk_colledge@gmail.com</a></li>
+                        <li><a href="" class="footer-inst flex"><img src="{{ URL::asset('img/inst.svg') }}" alt="">rpk_colledge</a></li>
                     </ul>
                 </div>
             </footer>
@@ -123,14 +113,14 @@
                   </g>
                 </svg>
             </div>
-            <input type="text" placeholder="ФИО" class="formitem" required>
-            <input type="email" placeholder="Email" class="formitem" required>
-            <textarea name="" id="" placeholder="Текст жалобы" class="formitem" required></textarea>
+            <input type="text" placeholder="ФИО" class="formitem">
+            <input type="email" placeholder="Email" class="formitem">
+            <textarea name="" id="" placeholder="Текст жалобы" class="formitem"></textarea>
             <input type="submit" value="Пожаловаться" class="formsubmit">
         </form>
     </div>
-        <script src="{{ asset('js/jq.min.js') }}"></script>
-        <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ URL::asset('js/jq.min.js') }}"></script>
+        <script src="{{ URL::asset('js/owl.carousel.min.js') }}"></script>
+        <script src="{{ URL::asset('js/app.js') }}"></script>
     </body>
 </html>

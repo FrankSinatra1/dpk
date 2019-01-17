@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,48 +9,36 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
 Route::get('/', 'SiteController@index');
-
 Route::get('/galery', 'GalleryController@index');
-
 Route::get('/news', 'NewsController@index');
-
 Route::get('/board', 'BoardController@index');
-
 Route::get('/teacher', 'TeacherController@index');
+
 
 Route::get('/addgallery', function () {
     return view('addgallery');
 });
-
-Route::get('/search', 'SearchController@query');
-
 Route::get('/about', function () {
     return view('about');
 });
-
 Route::get('/nopage', function () {
     return view('nopage');
 });
-
 Auth::routes();
-
 Route::get('/admin', 'HomeController@index')->name('admin');
 // 						КОНТРОЛЛЕРЫ@функция в контроллере
-
 Route::post('/addgallery', [
 	'uses' => 'GalleryController@insert'
 ])->name('gallery.create');
 
-Route::get('/search', [
-	'uses' => 'SearchController@query'
-])->name('search.create');
-
 Route::post('/addteacher', [
 	'uses' => 'TeacherController@insert'
 ])->name('teacher.create');
+
+Route::get('/search', [
+	'uses' => 'SearchController@query'
+])->name('search.create');
 
 Route::post('/addnews', [
 	'uses' => 'NewsController@insert'
@@ -62,5 +49,4 @@ Route::post('/addboard', [
 ])->name('board.create');
 
 Route::post('/image/upload', 'ImageController@upload')->name('image.upload');
-
 Route::get('/ournew/{new}', 'NewsController@new');
