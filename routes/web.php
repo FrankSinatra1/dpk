@@ -26,6 +26,8 @@ Route::get('/addgallery', function () {
     return view('addgallery');
 });
 
+Route::get('/search', 'SearchController@query');
+
 Route::get('/about', function () {
     return view('about');
 });
@@ -43,10 +45,13 @@ Route::post('/addgallery', [
 	'uses' => 'GalleryController@insert'
 ])->name('gallery.create');
 
+Route::get('/search', [
+	'uses' => 'SearchController@query'
+])->name('search.create');
+
 Route::post('/addteacher', [
 	'uses' => 'TeacherController@insert'
 ])->name('teacher.create');
-
 
 Route::post('/addnews', [
 	'uses' => 'NewsController@insert'

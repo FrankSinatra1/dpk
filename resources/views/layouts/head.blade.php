@@ -16,14 +16,14 @@
 
        <header class="header flex">
             <div class="logo">
-                <a href="/" class="flex">
+                <a href="{{ asset('/') }}" class="flex">
                     <img src="{{ asset('img/logo.svg') }}" alt="">
                     <span>Отделение "Программирования"</span>
                 </a>
             </div>
             <div class="listMenu">
                 <ul class="flex">
-                    <li><a href="/">Главная</a></li>
+                    <li><a href="{{ asset('/') }}">Главная</a></li>
                     <li><a href="">Об отделении</a>
                         <ul>
                             <li><a href="">Что-то такое</a></li>
@@ -40,8 +40,8 @@
                     </li>
                 </ul>
             </div>
-            <form action="" method="post" class="form-search flex">
-                <input type="text" placeholder="Поиск" class="input-search">
+            <form action="{{ route ('search.create') }}" method="get" class="form-search flex">
+                <input type="text" placeholder="Поиск" class="input-search" name="search" autocomplete="off">
                 <div class="container-close-search flex">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.962 45.962" class="close-search">
                       <g id="Group_2" data-name="Group 2" transform="translate(-1684.519 -45.019)">
@@ -57,6 +57,14 @@
                     </svg>
                 </div>
             </form>
+
+            <div class="result">
+                <p></p>
+            </div>
+
+            <script>
+                
+            </script>
         </header>
 
         <div class="wrap-container">
@@ -64,11 +72,11 @@
                 <div class="section-one__menu">
                     <p class="titleSection">Меню</p>
                     <ul>
-                        <li><a href="/news">Новости отделения</a></li>
-                        <li><a href="/teacher">Преподавательский состав</a></li>
-                        <li><a href="/schedule">Расписание занятий</a></li>
-                        <li><a href="/galery">Фотогалерея</a></li>
-                        <li><a href="/board">Доска почёта</a></li>
+                        <li><a href="{{ asset('/news') }}">Новости отделения</a></li>
+                        <li><a href="{{ asset('/teacher') }}">Преподавательский состав</a></li>
+                        <li><a href="{{ asset('/schedule') }}">Расписание занятий</a></li>
+                        <li><a href="{{ asset('/galery') }}">Фотогалерея</a></li>
+                        <li><a href="{{ asset('/board') }}">Доска почёта</a></li>
                     </ul>
                 </div>
 
