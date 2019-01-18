@@ -36,9 +36,12 @@ Route::post('/addteacher', [
 	'uses' => 'TeacherController@insert'
 ])->name('teacher.create');
 
-Route::get('/search', [
-	'uses' => 'SearchController@query'
-])->name('search.create');
+Route::get('/search',['uses' => 'SearchController@query'], function()
+{
+	if (Request::ajax()) {
+		return responseJSON($search);
+	}
+})->name('search.create');
 
 Route::post('/addnews', [
 	'uses' => 'NewsController@insert'

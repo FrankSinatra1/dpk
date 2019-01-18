@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="{{ URL::asset('css/owl.carousel.min.css') }}" />
         <link rel="stylesheet" href="{{ URL::asset('css/owl.theme.default.css') }}" />
         <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}" />
+        <script src="{{ URL::asset('js/jq.min.js') }}"></script>
     </head>
     <body class="body">
 
@@ -54,6 +55,8 @@
                       </g>
                     </svg>
                 </div>
+            <div class="result-search flex">
+            </div>
             </form>
         </header>
 

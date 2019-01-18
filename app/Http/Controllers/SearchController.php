@@ -12,6 +12,6 @@ class SearchController extends Controller
     	$search_value = $request->get('search');
         $search = Search::where('title', 'LIKE', '%'. $search_value . '%')->get();
         
-        return view('search', compact('search'));
+        return $search;
     }
 }

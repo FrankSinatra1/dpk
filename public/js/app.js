@@ -78,3 +78,31 @@ $(function () {
 		}
    });
 })
+
+// ajax 
+
+$(".input-search").on("keyup", function () {
+	$(".result-search a").empty();
+	$value = $(this).val();
+	$.ajax({
+		type : 'get',
+		url : '/search',
+		data:{'search':$value},
+		success:function(data){
+			$(".result-search a").remove();
+			var result = data;
+			result.forEach(function (data) {
+				$(".result-search").append("<a href='/ournew/"+data['id']+"' class='flex'>"+data['title']+"</>");
+			})
+		}
+	});
+})
+
+
+// $.get("search", function (data, xhr) {
+// 	var result = data;
+// 	result.forEach(function (data) {
+// 		$(".result-search a").text(data['title']);
+// 		console.log(data['title']);
+// 	})
+// });

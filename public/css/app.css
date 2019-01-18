@@ -143,6 +143,24 @@ a {
 	transition: .3s;
 }
 
+.result-search {
+	position: absolute;
+	flex-direction: column;
+    width: 100%;
+}
+
+.result-search a {
+	height: 100%;
+	color: #fff;
+    padding: 0 70px;
+	background: #382A74;
+    border-bottom: 1px solid #828282;
+    height: 108px;
+    width: 100%;
+    font-size: 18px;
+    align-items: center;
+}
+
 /*-------------------------------------*/
 
 .logo img {
@@ -222,6 +240,10 @@ a {
 .input-search_active {
 	top: 0;
 	transition: .3s;
+}
+
+.input-search_active .result-search {
+	top: 108px;
 }
 
 .input-search::placeholder {
