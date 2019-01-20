@@ -8,12 +8,16 @@ $(function () {
 	$(document).mouseup(function (e) {
 		if (!formsearch.is(e.target) && formsearch.has(e.target).length === 0) {
 			$(formsearch).removeClass("input-search_active");
+			$(".input-search").val("");
+			$(".result-search a").remove();
 		}
 		$(liSearch).on("click", function() {
 			$(formsearch).toggleClass("input-search_active");
 		})
 		$(closeSearch).on("click", function() {
 			$(formsearch).removeClass("input-search_active");
+			$(".input-search").val("");
+			$(".result-search a").remove();
 		});
 	});
 })
@@ -80,9 +84,7 @@ $(function () {
 })
 
 // ajax 
-
 $(".input-search").on("keyup", function () {
-	$(".result-search a").empty();
 	$value = $(this).val();
 	$.ajax({
 		type : 'get',
@@ -94,15 +96,10 @@ $(".input-search").on("keyup", function () {
 			result.forEach(function (data) {
 				$(".result-search").append("<a href='/ournew/"+data['id']+"' class='flex'>"+data['title']+"</>");
 			})
+
+			if ($(".input-search").val() == "") {
+				$(".result-search a").remove();
+			}
 		}
 	});
-})
-
-
-// $.get("search", function (data, xhr) {
-// 	var result = data;
-// 	result.forEach(function (data) {
-// 		$(".result-search a").text(data['title']);
-// 		console.log(data['title']);
-// 	})
-// });
+});
