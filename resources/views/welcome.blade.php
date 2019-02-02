@@ -49,7 +49,11 @@
                     </svg>
                 </span></p>
             </div>
+<<<<<<< HEAD
             <div class="wrap-pagination flex">
+=======
+            <div class="flex">
+>>>>>>> 006afa8f05fdbd113ca0666878b328fe7ec282de
                 {{ $news->links() }}
             </div>
         </div>
