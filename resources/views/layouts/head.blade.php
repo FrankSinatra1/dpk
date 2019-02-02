@@ -80,7 +80,7 @@
             <footer class="footer flex">
                 <div class="footer-text flex">
                     <a href=""><img src="{{ URL::asset('img/logo.svg') }}" alt="" class="footer-logo"></a>
-                    <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Алфавит жизни все, lorem мир несколько которое инициал продолжил предупреждал оксмокс семантика над гор составитель заманивший языком бросил большого языкового.</p>
+                    <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Алфавит жизни все, lorem мир несколько которое.</p>
                 </div>
                 <div class="footer-map">
                     <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A4701366301792e95943e6aa0c3328c44a5a0ef0062e34fbf334cd043fbcb797f&amp;source=constructor" width="700" height="200" frameborder="0"></iframe>

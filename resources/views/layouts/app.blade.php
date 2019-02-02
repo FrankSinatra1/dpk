@@ -19,7 +19,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'DPK') }}
+                        Вход в админ панель
                     </a>
                 </div>
 
